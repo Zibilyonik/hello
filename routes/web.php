@@ -2,44 +2,11 @@
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use App\Models\Job;
 
 Route::get('/', function () {
     return view('home');
 });
-
-class Job
-{
-    public static function all():array
-    {
-        return [
-            [
-                'id' => 1,
-                'title' => 'Bobber',
-                'salary' => '10 Monies'
-            ],
-            [
-                'id' => 2,
-                'title' => 'Johner',
-                'salary' => '4 Monies'
-            ],
-            [
-                'id' => 3,
-                'title' => 'Peacher',
-                'salary' => '7 Monies'
-            ],
-            [
-                'id' => 4,
-                'title' => 'Vincentman',
-                'salary' => '8 Monies'
-            ],
-            [
-                'id' => 5,
-                'title' => 'Pauler',
-                'salary' => '2 Monies'
-            ]
-        ];
-    }
-}
 
 Route::get('/about', function () {
     return view('about');
